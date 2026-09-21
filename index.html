@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elyana &amp; Julio Cesar — Nuestra Boda | 14 de Noviembre 2026</title>
+<meta name="description" content="Nos casamos el 14 de noviembre de 2026. Acompáñanos a celebrar el inicio de nuestra nueva vida juntos.">
+
+<!-- ==================================================================
+     TIPOGRAFÍAS (Google Fonts)
+     - Parisienne: caligrafía elegante para los nombres de los novios
+     - Cormorant Garamond: serif elegante para títulos y textos destacados
+     - Jost: sans-serif limpia y moderna para textos de lectura
+     ================================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================================
+   0. VARIABLES GLOBALES — PALETA Y TIPOGRAFÍA
+   Cambia aquí los colores o fuentes y se actualizará en toda la página.
+   ========================================================================= */
+:root{
+  /* Paleta Botánica: blanco, cremas verdosos y verde olivo */
+  --color-white:       #FFFFFF;
+  --color-cream:       #F6F8F5;   /* blanco verdoso muy sutil para fondos */
+  --color-cream-deep:  #E4EBE2;   /* verde muy claro para acentos */
+  --color-gold:        #76a771;   /* verde salvia / olivo principal (botones, iconos) */
+  --color-gold-soft:   #A8B8A6;   /* verde claro (bordes, divisores) */
+  --color-gold-deep:   #425441;   /* verde oscuro (hover, texto sobre claro) */
+  --color-ink:         #2D362C;   /* texto principal, oscuro con tinte verde */
+  --color-ink-soft:    #657264;   /* texto secundario */
+
+  --font-script: 'Parisienne', cursive;
+  --font-serif:  'Cormorant Garamond', serif;
+  --font-sans:   'Jost', sans-serif;
+
+  --shadow-soft: 0 18px 40px -20px rgba(66, 84, 65, 0.28);
+  --shadow-card: 0 10px 30px -15px rgba(66, 84, 65, 0.22);
+
+  --radius-sm: 3px;
+  --radius-md: 10px;
+  --radius-lg: 22px;
+
+  --container-width: 1080px;
+  --section-padding: clamp(4.5rem, 9vw, 7.5rem);
+}
+
+/* =========================================================================
+   1. RESET Y BASE
+   ========================================================================= */
+*, *::before, *::after{ box-sizing: border-box; margin: 0; padding: 0; }
+
+html{
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body{
+  font-family: var(--font-sans);
+  font-weight: 300;
+  color: var(--color-ink);
+  background-color: var(--color-white);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img{ max-width: 100%; display: block; }
+
+a{ color: inherit; text-decoration: none; }
+
+ul{ list-style: none; }
+
+::selection{ background: var(--color-gold-soft); color: var(--color-ink); }
+
+button{ font-family: inherit; border: none; background: none; cursor: pointer; }
+
+a:focus-visible,
+button:focus-visible{
+  outline: 2px solid var(--color-gold-deep);
+  outline-offset: 3px;
+}
+
+.container{
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section{
+  padding: var(--section-padding) 0;
+}
+
+.section--cream{ background-color: var(--color-cream); }
+
+/* Título de sección reutilizable, con pequeño ornamento dorado debajo */
+.section-header{
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto clamp(2.5rem, 6vw, 4rem);
+}
+
+.section-eyebrow{
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--color-gold-deep);
+  margin-bottom: 0.75rem;
+}
+
+.section-title{
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(2.1rem, 4.2vw, 3rem);
+  color: var(--color-ink);
+  line-height: 1.2;
+}
+
+.section-lead{
+  font-size: 1.05rem;
+  color: var(--color-ink-soft);
+  margin-top: 1rem;
+}
+
+/* Ornamento: línea — rombo — línea, usado como divisor elegante */
+.ornament{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin: 1.1rem auto 0;
+}
+.ornament span{
+  width: 34px;
+  height: 1px;
+  background: var(--color-gold-soft);
+}
+.ornament i{
+  width: 6px;
+  height: 6px;
+  background: var(--color-gold);
+  transform: rotate(45deg);
+  display: block;
+}
+
+/* Botones */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  padding: 0.95rem 2.1rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.35s ease, color 0.35s ease, transform 0.25s ease, border-color 0.35s ease;
+  cursor: pointer;
+}
+.btn:active{ transform: translateY(1px); }
+
+.btn-primary{
+  background: var(--color-gold);
+  color: var(--color-white);
+}
+.btn-primary:hover{ background: var(--color-gold-deep); }
+
+.btn-outline{
+  background: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold-deep);
+}
+.btn-outline:hover{
+  background: var(--color-gold);
+  color: var(--color-white);
+}
+
+.btn-whatsapp{
+  background: var(--color-gold);
+  color: var(--color-white);
+  padding: 1.1rem 2.6rem;
+  font-size: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+.btn-whatsapp:hover{ background: var(--color-gold-deep); }
+.btn-whatsapp svg{ width: 20px; height: 20px; flex-shrink: 0; }
+
+/* Iconos de línea (SVG) heredan el color del contenedor */
+.icon{
+  width: 26px;
+  height: 26px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* =========================================================================
+   ANIMACIÓN AL DESLIZAR — sutil aparición de cada bloque al hacer scroll
+   ========================================================================= */
+.reveal{
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  .reveal{ opacity: 1; transform: none; transition: none; }
+}
+
+/* =========================================================================
+   2. PORTADA / HERO
+   ========================================================================= */
+.hero{
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/*
+  📸 CAMBIAR AQUÍ LA FOTO DE PORTADA:
+  1) Crea una carpeta llamada "images" junto a este archivo index.html.
+  2) Guarda tu foto ahí, por ejemplo con el nombre "foto-portada.jpg".
+  3) Si tu imagen tiene otro nombre, actualízalo abajo en background-image (url).
+  Mientras no exista la imagen, se mostrará automáticamente un degradado
+  dorado de respaldo, así que la página nunca se ve "rota".
+*/
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    url('images/foto-portada.jpg'),
+    linear-gradient(55deg, #B5C9BC 0%, #94AFA0 42%, #739483 78%, #557766 100%);
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+}
+
+/* Capa oscura sobre la foto para que el texto blanco siempre sea legible,
+   con degradado hacia blanco en la base para una transición suave */
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 22, 12, 0.32) 0%,
+    rgba(30, 22, 12, 0.22) 45%,
+    rgba(255, 255, 255, 0.96) 96%
+  );
+}
+
+.hero-content{
+  padding: 7rem 1.5rem 4rem;
+  color: var(--color-white);
+  max-width: 720px;
+}
+
+.hero-monogram{
+  font-family: var(--font-script);
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin-bottom: 1.4rem;
+  opacity: 0.95;
+}
+
+.hero-eyebrow{
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+  color: var(--color-cream);
+}
+
+.hero-names{
+  font-family: var(--font-script);
+  font-size: clamp(3.4rem, 11vw, 6.6rem);
+  line-height: 1.05;
+  font-weight: 400;
+}
+
+.hero-date{
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.6vw, 1.5rem);
+  letter-spacing: 0.04em;
+  margin-top: 1.3rem;
+  color: var(--color-cream);
+}
+
+.hero-date::before,
+.hero-date::after{
+  content: '—';
+  margin: 0 0.7rem;
+  opacity: 0.7;
+}
+
+.hero-message{
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  max-width: 480px;
+  margin: 1.8rem auto 0;
+  color: var(--color-white);
+  opacity: 0.95;
+}
+
+.hero-scroll-cue{
+  position: absolute;
+  bottom: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  opacity: 0.85;
+}
+
+.hero-scroll-cue svg{
+  width: 16px;
+  height: 16px;
+  animation: bounce 2.2s ease-in-out infinite;
+}
+
+@keyframes bounce{
+  0%, 100%{ transform: translateY(0); }
+  50%{ transform: translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero-scroll-cue svg{ animation: none; }
+}
+
+/* =========================================================================
+   3. NUESTRA HISTORIA
+   ========================================================================= */
+.story-card{
+  background: var(--color-white);
+  border: 1px solid var(--color-gold-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  display: grid;
+  gap: 2.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.story-text p{
+  color: var(--color-ink-soft);
+  font-size: 1.03rem;
+  margin-bottom: 1rem;
+}
+
+.story-text p:last-child{ margin-bottom: 0; }
+
+.story-text strong{ color: var(--color-ink); font-weight: 500; }
+
+.story-photos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Marco de foto: si la imagen no existe todavía, se muestra un
+   placeholder crema con borde dorado en vez de un ícono roto */
+.photo-frame{
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-gold-soft);
+  background: var(--color-cream);
+}
+
+.photo-frame img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-frame.no-image::after{
+  content: 'Foto de la pareja';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-gold-deep);
+  background: var(--color-cream);
+}
+
+@media (min-width: 720px){
+  .story-card{
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+}
+
+/* =========================================================================
+   4. CUENTA REGRESIVA
+   ========================================================================= */
+.countdown-section{
+  text-align: center;
+}
+
+.countdown-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.countdown-item{
+  background: var(--color-white);
+  border: 1px solid var(--color-gold-soft);
+  border-radius: var(--radius-md);
+  padding: clamp(1rem, 3vw, 1.8rem) 0.4rem;
+}
+
+.countdown-number{
+  display: block;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 6vw, 3.1rem);
+  color: var(--color-gold-deep);
+  line-height: 1;
+}
+
+.countdown-label{
+  display: block;
+  margin-top: 0.5rem;
+  font-size: clamp(0.68rem, 1.6vw, 0.85rem);
+  letter-spacing: 0.04em;
+  color: var(--color-ink-soft);
+}
+
+.countdown-message{
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--color-gold-deep);
+  display: none; /* se muestra vía JS cuando la fecha ya llegó */
+}
+
+/* =========================================================================
+   5. UBICACIONES
+   ========================================================================= */
+.locations-grid{
+  display: grid;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.location-card{
+  background: var(--color-white);
+  border: 1px solid var(--color-gold-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: clamp(1.8rem, 4vw, 2.6rem);
+  text-align: center;
+}
+
+.location-icon{
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 1.1rem;
+  border: 1px solid var(--color-gold-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+}
+
+.location-card h3{
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.location-name{
+  font-weight: 500;
+  color: var(--color-ink);
+  margin-bottom: 0.25rem;
+}
+
+.location-address,
+.location-time{
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.location-card .btn{ margin-top: 1.4rem; }
+
+@media (min-width: 720px){
+  .locations-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+/* =========================================================================
+   6. ITINERARIO
+   ========================================================================= */
+.itinerary{
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.itinerary-list{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+/* Línea vertical que conecta los eventos */
+.itinerary-list::before{
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 27px;
+  width: 1px;
+  background: var(--color-gold-soft);
+}
+
+.itinerary-item{
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.3rem;
+  align-items: flex-start;
+}
+
+.itinerary-icon{
+  position: relative;
+  z-index: 1;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 1px solid var(--color-gold-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+}
+
+.itinerary-time{
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-gold-deep);
+  font-size: 1.05rem;
+  margin-bottom: 0.15rem;
+}
+
+.itinerary-title{
+  font-weight: 500;
+  color: var(--color-ink);
+  margin-bottom: 0.2rem;
+}
+
+.itinerary-desc{
+  color: var(--color-ink-soft);
+  font-size: 0.94rem;
+}
+
+@media (min-width: 720px){
+  .itinerary-list::before{ left: 50%; transform: translateX(-50%); }
+
+  .itinerary-item{
+    grid-template-columns: 1fr 56px 1fr;
+    gap: 1.3rem;
+  }
+
+  /* El ícono siempre va en la columna central (línea de tiempo) */
+  .itinerary-icon{
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /* Filas impares: el texto va a la izquierda del ícono */
+  .itinerary-text{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+  }
+
+  /* Filas pares: el texto va a la derecha del ícono (efecto zigzag) */
+  .itinerary-item:nth-child(even) .itinerary-text{
+    grid-column: 3;
+    text-align: left;
+  }
+}
+
+/* =========================================================================
+   7. NUESTRA META DE BODAS (regalos)
+   ========================================================================= */
+.gift-card{
+  max-width: 780px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border: 1px solid var(--color-gold-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: clamp(2rem, 5vw, 3.2rem);
+}
+
+.gift-heading{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gift-title{
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  color: var(--color-ink);
+}
+
+.gift-subtitle{
+  color: var(--color-ink-soft);
+  font-size: 0.98rem;
+  margin-top: 0.6rem;
+}
+
+/* Barra de progreso */
+.progress-wrap{
+  margin: 1.8rem 0 2.4rem;
+}
+
+.progress-track{
+  width: 100%;
+  height: 10px;
+  background: var(--color-cream-deep);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill{
+  height: 100%;
+  width: 0%; /* el ancho real lo asigna el JavaScript, ver abajo */
+  background: linear-gradient(90deg, var(--color-gold-soft), var(--color-gold));
+  border-radius: 999px;
+  transition: width 1.2s ease;
+}
+
+.progress-label{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--color-ink-soft);
+}
+
+.progress-label span:last-child{
+  font-weight: 500;
+  color: var(--color-gold-deep);
+}
+
+/* Bloque de datos de pago (Yape/Plin + cuenta bancaria) */
+.payment-grid{
+  display: grid;
+  gap: 1.6rem;
+  padding-top: 1.8rem;
+  border-top: 1px dashed var(--color-gold-soft);
+}
+
+.payment-block h4{
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 0.8rem;
+  color: var(--color-ink);
+}
+
+.qr-frame{
+  position: relative;
+  width: 168px;
+  height: 168px;
+  margin: 0 auto 0.9rem;
+  background: var(--color-cream);
+  border: 1px dashed var(--color-gold);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-frame img{ width: 100%; height: 100%; object-fit: contain; padding: 0.6rem; }
+
+.qr-frame.no-image::after{
+  content: 'Código QR\A Yape / Plin';
+  white-space: pre;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--color-gold-deep);
+  padding: 0 0.5rem;
+}
+
+.payment-block.yape{ text-align: center; }
+
+.payment-line{
+  font-size: 0.95rem;
+  color: var(--color-ink-soft);
+  margin-bottom: 0.35rem;
+}
+
+.payment-line strong{
+  color: var(--color-ink);
+  font-weight: 500;
+}
+
+@media (min-width: 640px){
+  .payment-grid{ grid-template-columns: 168px 1fr; align-items: start; }
+  .payment-block.yape{ text-align: left; }
+}
+
+/* =========================================================================
+   8. FOTOS DEL EVENTO (anuncio)
+   ========================================================================= */
+.photos-announcement{
+  text-align: center;
+}
+
+.photos-icon{
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.4rem;
+  border: 1px solid var(--color-gold-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+}
+
+.photos-announcement p{
+  max-width: 520px;
+  margin: 0.8rem auto 0;
+  color: var(--color-ink-soft);
+}
+
+/* =========================================================================
+   9. CONFIRMACIÓN DE ASISTENCIA (RSVP)
+   ========================================================================= */
+.rsvp{
+  text-align: center;
+  background: var(--color-cream);
+}
+
+.rsvp p{
+  max-width: 480px;
+  margin: 0.9rem auto 2.2rem;
+  color: var(--color-ink-soft);
+}
+
+/* =========================================================================
+   10. FOOTER
+   ========================================================================= */
+.site-footer{
+  text-align: center;
+  padding: clamp(3rem, 7vw, 4.5rem) 1.5rem;
+  color: var(--color-white);
+  background-color: #2D3A26; /* Verde oscuro elegante */
+}
+
+.footer-monogram{
+  font-family: var(--font-script);
+  font-size: clamp(2.2rem, 6vw, 3rem);
+  margin-bottom: 0.6rem;
+}
+
+.footer-date{
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--color-cream);
+  opacity: 0.85;
+}
+
+.footer-note{
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+  color: var(--color-cream);
+  opacity: 0.9;
+}
+
+/* =========================================================================
+   EFECTO DE HOJAS CAYENDO Y FLOTANDO
+   ========================================================================= */
+.leaves-animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Permite hacer clic a través de las hojas */
+  z-index: 999;
+  overflow: hidden;
+}
+
+.falling-leaf {
+  position: absolute;
+  top: -10%;
+  width: 22px;
+  height: 22px;
+  fill: #6B8B7B; /* Color verde de la hoja */
+  opacity: 0.65;
+  animation: leafFall linear infinite;
+}
+
+/* Diferentes posiciones, tamaños y velocidades para cada hoja */
+.falling-leaf:nth-child(1) { left: 8%;  animation-duration: 10s; animation-delay: 0s;  width: 26px; height: 26px; }
+.falling-leaf:nth-child(2) { left: 24%; animation-duration: 14s; animation-delay: 3s;  width: 18px; height: 18px; }
+.falling-leaf:nth-child(3) { left: 42%; animation-duration: 11s; animation-delay: 1.5s; }
+.falling-leaf:nth-child(4) { left: 60%; animation-duration: 13s; animation-delay: 4s;  width: 28px; height: 28px; }
+.falling-leaf:nth-child(5) { left: 78%; animation-duration: 9s;  animation-delay: 2s;  width: 20px; height: 20px; }
+.falling-leaf:nth-child(6) { left: 91%; animation-duration: 12s; animation-delay: 5s; }
+
+@keyframes leafFall {
+  0% {
+    transform: translateY(0) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) translateX(60px);
+    opacity: 0;
+  }
+}
+/* =========================================================================
+   BOTÓN FLOTANTE DE MÚSICA DE FONDO
+   ========================================================================= */
+.music-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--color-gold, #81A290);
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+}
+
+.music-btn.playing {
+  animation: pulse-music 2s infinite;
+}
+
+@keyframes pulse-music {
+  0% { box-shadow: 0 0 0 0 rgba(129, 162, 144, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(129, 162, 144, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(129, 162, 144, 0); }
+}
+</style>
+</head>
+<body>
+  <!-- =====================================================================
+     DECORACIÓN FLORAL COMPLETA (FLORES Y LIANAS EN ESQUINAS)
+     ===================================================================== -->
+
+<!-- Arreglo Floral Esquina Izquierda -->
+<div class="decoracion-floral esquina-izq">
+  <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Lianas y Hojas -->
+    <path d="M0 0 C40 10 70 40 80 90 C50 60 20 40 0 30 Z" fill="#8a9a7b" opacity="0.4"/>
+    <path d="M0 0 C60 20 90 60 100 120" stroke="#7a8b6e" stroke-width="2"/>
+    <!-- Flor Principal (Rosa) -->
+    <circle cx="45" cy="45" r="18" fill="#e8b4b8" opacity="0.95"/>
+    <circle cx="45" cy="45" r="13" fill="#f4d3d6"/>
+    <circle cx="45" cy="45" r="8" fill="#e5989b"/>
+    <circle cx="45" cy="45" r="4" fill="#b55257"/>
+    <!-- Flores Secundarias -->
+    <circle cx="22" cy="65" r="10" fill="#f4d3d6"/>
+    <circle cx="22" cy="65" r="5" fill="#e5989b"/>
+    <circle cx="70" cy="25" r="10" fill="#f4d3d6"/>
+    <circle cx="70" cy="25" r="5" fill="#e5989b"/>
+    <!-- Capullos Dorados -->
+    <circle cx="85" cy="75" r="4" fill="#c5a059"/>
+    <circle cx="35" cy="95" r="3" fill="#c5a059"/>
+  </svg>
+</div>
+
+<!-- Arreglo Floral Esquina Derecha -->
+<div class="decoracion-floral esquina-der">
+  <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Lianas y Hojas -->
+    <path d="M0 0 C40 10 70 40 80 90 C50 60 20 40 0 30 Z" fill="#8a9a7b" opacity="0.4"/>
+    <path d="M0 0 C60 20 90 60 100 120" stroke="#7a8b6e" stroke-width="2"/>
+    <!-- Flor Principal (Rosa) -->
+    <circle cx="45" cy="45" r="18" fill="#e8b4b8" opacity="0.95"/>
+    <circle cx="45" cy="45" r="13" fill="#f4d3d6"/>
+    <circle cx="45" cy="45" r="8" fill="#e5989b"/>
+    <circle cx="45" cy="45" r="4" fill="#b55257"/>
+    <!-- Flores Secundarias -->
+    <circle cx="22" cy="65" r="10" fill="#f4d3d6"/>
+    <circle cx="22" cy="65" r="5" fill="#e5989b"/>
+    <circle cx="70" cy="25" r="10" fill="#f4d3d6"/>
+    <circle cx="70" cy="25" r="5" fill="#e5989b"/>
+    <!-- Capullos Dorados -->
+    <circle cx="85" cy="75" r="4" fill="#c5a059"/>
+    <circle cx="35" cy="95" r="3" fill="#c5a059"/>
+  </svg>
+</div>
+
+<style>
+  /* Posicionamiento fijo de flores superiores */
+  .decoracion-floral {
+    position: fixed;
+    width: 140px;
+    height: 140px;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  .esquina-izq {
+    top: 0;
+    left: 0;
+  }
+  .esquina-der {
+    top: 0;
+    right: 0;
+    transform: scaleX(-1);
+  }
+
+  /* Detalle floral en la parte inferior de las tarjetas */
+  section, .card {
+    position: relative;
+  }
+  section::after {
+    content: "💕💕";
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 1.1rem;
+    opacity: 0.35;
+  }
+
+  /* Separador floral para colocar entre secciones */
+  .separador-floral {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 1.2rem;
+    color: #e5989b;
+    letter-spacing: 6px;
+  }
+</style>
+<div class="separador-floral">🌸 🌿 🌸</div>
+  <!-- =====================================================================
+     DECORACIÓN GLOBAL FLORAL Y BOTÁNICA PARA TODA LA PÁGINA
+     ===================================================================== -->
+
+<!-- 1. Hojas y lianas fijas en las esquinas de la pantalla -->
+<div class="decoracion-esquina esquina-tl">
+  <svg viewBox="0 0 100 100" fill="none">
+    <path d="M0,0 Q50,0 70,50 Q40,40 0,100 Z" fill="#7a8b6e" opacity="0.25"/>
+    <path d="M0,0 Q80,10 90,80" stroke="#7a8b6e" stroke-width="2" fill="none"/>
+    <circle cx="30" cy="15" r="4" fill="#a3b18a"/>
+    <circle cx="60" cy="30" r="5" fill="#c5a059" opacity="0.8"/>
+    <circle cx="80" cy="60" r="4" fill="#a3b18a"/>
+  </svg>
+</div>
+
+<div class="decoracion-esquina esquina-tr">
+  <svg viewBox="0 0 100 100" fill="none">
+    <path d="M0,0 Q50,0 70,50 Q40,40 0,100 Z" fill="#7a8b6e" opacity="0.25"/>
+    <path d="M0,0 Q80,10 90,80" stroke="#7a8b6e" stroke-width="2" fill="none"/>
+    <circle cx="30" cy="15" r="4" fill="#a3b18a"/>
+    <circle cx="60" cy="30" r="5" fill="#c5a059" opacity="0.8"/>
+    <circle cx="80" cy="60" r="4" fill="#a3b18a"/>
+  </svg>
+</div>
+
+<!-- 2. Estilos globales para la web -->
+<style>
+  /* Fondo general elegante */
+  body {
+    background-color: #faf8f5 !important;
+    background-image: radial-gradient(#e3ded6 0.8px, transparent 0.8px) !important;
+    background-size: 24px 24px !important;
+    color: #4a443b;
+    font-family: 'Segoe UI', Georgia, serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Lianas de esquina fijas */
+  .decoracion-esquina {
+    position: fixed;
+    width: 130px;
+    height: 130px;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  .esquina-tl { top: 0; left: 0; }
+  .esquina-tr { top: 0; right: 0; transform: scaleX(-1); }
+
+  /* Títulos con tipografía romántica y color verde oliva / dorado */
+  h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', serif !important;
+    color: #3b4235 !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+
+  /* Estilos para contenedores y tarjetas en general */
+  section, .card, .container, .bloque {
+    border-radius: 16px;
+    border: 1px solid #e8e0d5;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 20px rgba(122, 139, 110, 0.06);
+  }
+
+  /* Botones con estilo botánico */
+  button, .btn, a.button {
+    background-color: #7a8b6e !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 10px rgba(122, 139, 110, 0.3) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  button:hover, .btn:hover, a.button:hover {
+    background-color: #647359 !important;
+    transform: translateY(-2px);
+  }
+</style>
+<!-- EFECTO VISUAL DE HOJITAS FLOTANTES -->
+<div class="leaves-animation-container" aria-hidden="true">
+  <!-- Hoja 1 -->
+  <svg class="falling-leaf" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.23,22.75C11.07,16.91 18,15 22,8C22,8 21,2 17,8Z"/></svg>
+  <!-- Hoja 2 -->
+  <svg class="falling-leaf" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.23,22.75C11.07,16.91 18,15 22,8C22,8 21,2 17,8Z"/></svg>
+  <!-- Hoja 3 -->
+  <svg class="falling-leaf" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.23,22.75C11.07,16.91 18,15 22,8C22,8 21,2 17,8Z"/></svg>
+  <!-- Hoja 4 -->
+  <svg class="falling-leaf" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.23,22.75C11.07,16.91 18,15 22,8C22,8 21,2 17,8Z"/></svg>
+  <!-- Hoja 5 -->
+  <svg class="falling-leaf" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.23,22.75C11.07,16.91 18,15 22,8C22,8 21,2 17,8Z"/></svg>
+  <!-- Hoja 6 -->
+  <svg class="falling-leaf" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.23,22.75C11.07,16.91 18,15 22,8C22,8 21,2 17,8Z"/></svg>
+</div>
+<!-- =====================================================================
+     1. PORTADA / HERO
+     ===================================================================== -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <p class="hero-monogram">J &amp; E</p>
+    <p class="hero-eyebrow">Nos casamos</p>
+    <!-- CAMBIAR AQUÍ: nombres de los novios -->
+    <h1 class="hero-names">Julio Cesar &amp; Elyana</h1>
+    <!-- CAMBIAR AQUÍ: fecha principal -->
+    <p class="hero-date">14 de Noviembre, 2026</p>
+    <!-- CAMBIAR AQUÍ: frase romántica de bienvenida -->
+    <p class="hero-message">"Dos almas, un mismo camino. Nos encantaría que seas parte del comienzo de nuestra historia juntos."</p>
+  </div>
+
+  <a href="#historia" class="hero-scroll-cue" aria-label="Ir a la siguiente sección">
+    <span>Desliza</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+  </a>
+</section>
+<!-- =====================================================================
+     1.5 NUESTROS PADRES Y PADRINOS
+     ===================================================================== -->
+<section class="section section--cream" id="padres-padrinos">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Con la bendición de Dios y de nuestros Padres</span>
+      <h2 class="section-title">Nuestra Familia &amp; Padrinos</h2>
+      <div class="ornament"><span></span><i></i><span></span></div>
+    </div>
+
+    <div class="story-card reveal" style="max-width: 850px; text-align: center;">
+      <div style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        
+        <!-- Bloque Padres -->
+        <div class="story-text" style="padding: 0.5rem;">
+          <h3 style="font-family: var(--font-serif); color: var(--color-gold-deep); font-size: 1.6rem; margin-bottom: 1rem;">Nuestros Padres</h3>
+          <p style="margin-bottom: 0.8rem;"><strong>Madre del Novio:</strong><br> Julia Choque Mamani</p>
+          <p><strong>Padres de la Novia:</strong><br> Manuel Cuchurumi Apaza &amp; Josefa Condori Apaza</p>
+        </div>
+
+        <!-- Bloque Padrinos -->
+        <div class="story-text" style="padding: 0.5rem;">
+          <h3 style="font-family: var(--font-serif); color: var(--color-gold-deep); font-size: 1.6rem; margin-bottom: 1rem;">Nuestros Padrinos</h3>
+          <p style="margin-bottom: 0.8rem;"><strong>Padrinos de Religioso:</strong><br> Efrain Justo Payehuanca &amp; Liz Celedonia Apaza Mamani</p>
+          <p><strong>Padrinos de Civil:</strong><br> Wuilder N. Maron Urbiola &amp; Lola L. Mamani Cuchurumi de Marón</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     2. NUESTRA HISTORIA
+     ===================================================================== -->
+<section class="section" id="historia">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Nuestra historia</span>
+      <h2 class="section-title">Un amor que se cuenta solo</h2>
+      <div class="ornament"><span></span><i></i><span></span></div>
+    </div>
+
+    <div class="story-card reveal">
+      <div class="story-text">
+        <!-- CAMBIAR AQUÍ: texto emotivo sobre la pareja -->
+        <p>Hay alegrías en la vida que solo se vuelven completas cuando se comparten con las personas que más queremos. Hoy, nuestros corazones rebosan de gratitud al mirar hacia atrás y ver cómo Dios ha guiado cada uno de nuestros pasos hasta este momento.
+
+Tenemos la inmensa felicidad y la gran bendición de formar una familia unida en el amor, afianzada por la fe y cobijada por nuestra Iglesia Católica. Él ha sido el cimiento de nuestra historia y será la luz que ilumine nuestro nuevo hogar.
+
+Con mucha ilusión, Julio Cesar y Elyana queremos invitarlos a ser testigos de nuestra promesa de amor eterno frente al altar. Nos haría muy felices que nos acompañen este 14 de noviembre para celebrar juntos el sacramento de nuestro matrimonio y compartir la gracia de esta nueva etapa.</p>
+        <p>Hoy, después de tanto camino recorrido juntos, damos el paso más importante: unir nuestras vidas para siempre. <strong>Julio Cesar y Elyana</strong> queremos compartir este día tan especial con las personas que más queremos, y por eso te esperamos con el corazón abierto.</p>
+      </div>
+
+      <div class="story-photos">
+        <!--
+          📸 CAMBIAR AQUÍ: coloca tus fotos en la carpeta "images"
+          y actualiza el atributo src de cada <img> con el nombre real del archivo.
+        -->
+        
+          <img src="images/historia-1.jpg" alt="Elyana y Julio Cesar" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+        </div>
+       
+          <img src="images/historia-2.jpg" alt="Elyana y Julio Cesar" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     3. CUENTA REGRESIVA
+     ===================================================================== -->
+<section class="section section--cream countdown-section" id="cuenta-regresiva">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Falta muy poco</span>
+      <h2 class="section-title">Nos vemos en...</h2>
+      <div class="ornament"><span></span><i></i><span></span></div>
+    </div>
+
+    <div class="countdown-grid reveal" id="countdownGrid">
+      <div class="countdown-item">
+        <span class="countdown-number" id="cdDays">00</span>
+        <span class="countdown-label">Días</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="cdHours">00</span>
+        <span class="countdown-label">Horas</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="cdMinutes">00</span>
+        <span class="countdown-label">Minutos</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="cdSeconds">00</span>
+        <span class="countdown-label">Segundos</span>
+      </div>
+    </div>
+
+    <p class="countdown-message" id="countdownMessage">¡Hoy es el gran día! Nos vemos en el altar 🤍</p>
+  </div>
+</section>
+
+<!-- =====================================================================
+     4. UBICACIONES (MISA Y RECEPCIÓN)
+     ===================================================================== -->
+<section class="section" id="ubicacion">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Ubicaciones</span>
+      <h2 class="section-title">¿Dónde será?</h2>
+      <div class="ornament"><span></span><i></i><span></span></div>
+    </div>
+
+    <div class="locations-grid">
+
+      <!-- Ceremonia religiosa -->
+      <div class="location-card reveal">
+        <div class="location-icon">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M6.5 8h11"/><path d="M9 21v-5a3 3 0 0 1 6 0v5"/></svg>
+        </div>
+        <h3>Ceremonia Religiosa</h3>
+        <!-- CAMBIAR AQUÍ: nombre del templo/iglesia -->
+        <p class="location-name">Iglesia Pza. Mariscal Castilla, C. Colorado</p>
+        <!-- CAMBIAR AQUÍ: dirección exacta -->
+        <p class="location-address">28 de Julio 205, Arequipa 04014</p>
+        <!-- CAMBIAR AQUÍ: hora de la ceremonia -->
+        <p class="location-time">9:30 a.m.</p>
+        <!-- CAMBIAR AQUÍ EL LINK DE GOOGLE MAPS (reemplaza el "#" por tu enlace de Google Maps) -->
+        <a href="https://maps.app.goo.gl/nFwPth1o9snJBJQbA" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Cómo llegar
+        </a>
+      </div>
+
+      <!-- Recepción / Fiesta -->
+      <div class="location-card reveal">
+        <div class="location-icon">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16l-6.5 8.5V20h-3v-7.5L4 4Z"/><path d="M8.5 20h7"/></svg>
+        </div>
+        <h3>Recepción &amp; Fiesta</h3>
+        <!-- CAMBIAR AQUÍ: nombre del local -->
+        <p class="location-name">Crystal Palace - Salón de recepciones</p>
+        <!-- CAMBIAR AQUÍ: dirección exacta -->
+        <p class="location-address">Variante de Uchumayo km 4.5, Sachaca 04013</p>
+        <!-- CAMBIAR AQUÍ EL LINK DE GOOGLE MAPS (reemplaza el "#" por tu enlace de Google Maps) -->
+        <a href="https://maps.app.goo.gl/dkxuFGwTmKsU3KHv6" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Cómo llegar
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     5. ITINERARIO DE ACTIVIDADES
+     ===================================================================== -->
+<style>
+  #itinerario {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  #itinerario h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #333333;
+  }
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .timeline-card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeline-badge {
+    background-color: #c5a059;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+  }
+  .timeline-content h3 {
+    margin: 4px 0;
+    font-size: 1.15rem;
+    color: #222222;
+  }
+  .timeline-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666666;
+  }
+</style>
+
+<section id="itinerario">
+  <h2>Itinerario del Evento</h2>
+  <div class="timeline-container">
+    
+    <div class="timeline-card">
+      <span class="timeline-badge">09:30 A.M.</span>
+      <div class="timeline-content">
+        <h3>Ceremonia Religiosa</h3>
+        <p>Parroquia Sagrados Corazones de Jesús Pachacutec</p>
+      </div>
+    </div>
+
+    <div class="timeline-card">
+      <span class="timeline-badge">11:00 A.M.</span>
+      <div class="timeline-content">
+        <h3>Fotos & Traslado</h3>
+        <p>Atrio de la iglesia y traslado hacia Sachaca</p>
+      </div>
+    </div>
+
+    <div class="timeline-card">
+      <span class="timeline-badge">12:30 P.M.</span>
+      <div class="timeline-content">
+        <h3>Recepción de Invitados</h3>
+        <p>Local Crystal Palace</p>
+      </div>
+    </div>
+
+    <div class="timeline-card">
+      <span class="timeline-badge">01:00 P.M.</span>
+      <div class="timeline-content">
+        <h3>Matrimonio Civil</h3>
+        <p>Local Crystal Palace</p>
+      </div>
+    </div>
+
+    <div class="timeline-card">
+      <span class="timeline-badge">02:00 P.M.</span>
+      <div class="timeline-content">
+        <h3>Brindis de Honor</h3>
+        <p>Local Crystal Palace</p>
+      </div>
+    </div>
+
+    <div class="timeline-card">
+      <span class="timeline-badge">02:30 P.M.</span>
+      <div class="timeline-content">
+        <h3>Almuerzo de Gala</h3>
+        <p>Local Crystal Palace</p>
+      </div>
+    </div>
+
+    <div class="timeline-card">
+      <span class="timeline-badge">04:00 P.M.</span>
+      <div class="timeline-content">
+        <h3>Fiesta & Baile</h3>
+        <p>Local Crystal Palace</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CÓDIGO POSTERIOR DE TU PÁGINA (por ejemplo, confirmación de asistencia) -->
+
+<!-- =====================================================================
+     6. MESA DE REGALOS — "NUESTRA META DE BODAS"
+     ===================================================================== -->
+<section class="section" id="regalos">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Mesa de regalos</span>
+      <h2 class="section-title">Nuestra meta de bodas</h2>
+      <div class="ornament"><span></span><i></i><span></span></div>
+    </div>
+
+    <div class="gift-card reveal">
+      <div class="gift-heading">
+        <!-- CAMBIAR AQUÍ: título del sueño/meta de los novios -->
+        <p class="gift-title">Tenerlos a nuestro lado mientras recibimos la bendición de Dios es el único tesoro que necesitamos. Sin embargo, si desean acompañarnos con un obsequio para iniciar esta hermosa aventura como familia, pueden hacerlo por aquí. Agradecemos infinitamente su cariño y cada pequeño aporte para hacer realidad nuestras metas."</p>
+        <!-- CAMBIAR AQUÍ: descripción breve de la meta -->
+        <p class="gift-subtitle">Tu presencia es nuestro mejor regalo. Si además deseas contribuir con un detalle, nos encantaría que nos ayudes a cumplir este sueño juntos.</p>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-label">
+          <span>Meta alcanzada</span>
+          <span id="progressLabel">0%</span>
+        </div>
+      </div>
+
+      <div class="payment-grid">
+
+        <!-- Yape / Plin -->
+        <div class="payment-block yape">
+          <h4>Yape / Plin</h4>
+          <!--
+            📌 INSTRUCCIONES PARA EL CÓDIGO QR:
+            1) Crea una carpeta llamada "images" junto a este archivo index.html.
+            2) Guarda ahí tu imagen del QR de Yape o Plin (ej: "qr-yape-plin.jpg").
+            3) Verifica que el "src" de abajo coincida exactamente con el nombre del archivo.
+          -->
+          <div class="qr-frame">
+            <img src="YAPE2.JPEG" alt="Código QR Yape / Plin" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+          </div>
+          <!-- CAMBIAR AQUÍ: número de celular asociado a Yape/Plin -->
+          <p class="payment-line"><strong>Número:</strong> +51 951 545 246</p>
+          <!-- CAMBIAR AQUÍ: nombre del titular -->
+          <p class="payment-line"><strong>Titular:</strong> Julio Cesar Vilca</p>
+        </div>
+
+        <!-- Cuenta bancaria -->
+        <div class="payment-block bank">
+          <h4>Transferencia Bancaria</h4>
+          <!-- CAMBIAR AQUÍ: datos de la cuenta bancaria -->
+          <p class="payment-line"><strong>Banco:</strong> Banco de Crédito del Perú (BCP)</p>
+          <p class="payment-line"><strong>Titular:</strong> Julio Cesar Vilca </p>
+          <p class="payment-line"><strong>N.° de Cuenta BCP:</strong> 21594874048066</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     7. FOTOS DEL EVENTO (anuncio)
+     ===================================================================== -->
+<section class="section section--cream photos-announcement" id="fotos">
+  <div class="container">
+    <div class="reveal">
+      <div class="photos-icon">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+      </div>
+      <span class="section-eyebrow">Un recuerdo para siempre</span>
+      <h2 class="section-title">Comparte tus fotos</h2>
+      <p>¡El día de la boda podrás compartir y subir tus fotos aquí! Muy pronto habilitaremos este espacio para reunir todos los momentos capturados por ustedes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     8. CONFIRMACIÓN DE ASISTENCIA (RSVP)
+     ===================================================================== -->
+<section class="section rsvp" id="confirmar">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-eyebrow">  </span>
+      <h2 class="section-title">Confirma tu asistencia</h2>
+      <div class="ornament"><span></span><i></i><span></span></div>
+      <p>Tu presencia hace de este momento algo aún más especial. Por favor, ayúdanos confirmando tu asistencia antes de la fecha indicada.</p>
+
+      <!--
+        💬 EL ENLACE DE WHATSAPP SE ARMA AUTOMÁTICAMENTE DESDE EL JAVASCRIPT
+        (ver la sección "RSVP / WHATSAPP" al final del archivo, dentro de <script>).
+        Ahí puedes cambiar el número de teléfono y el mensaje predeterminado.
+      -->
+      <a href="#" id="rsvpBtn" target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.29-.15-1.71-.84-1.97-.94-.27-.1-.46-.15-.66.15-.2.29-.76.94-.93 1.13-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.51h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.43s1.05 2.82 1.2 3.01c.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.11.56-.08 1.71-.7 1.96-1.37.24-.68.24-1.26.17-1.37-.07-.12-.27-.19-.56-.34Z"/><path d="M12.03 2C6.5 2 2 6.48 2 12c0 1.87.51 3.63 1.4 5.13L2 22l4.99-1.31A9.96 9.96 0 0 0 12.03 22C17.55 22 22 17.52 22 12S17.55 2 12.03 2Zm0 18.2c-1.7 0-3.28-.47-4.63-1.28l-.33-.2-3.09.81.82-3.02-.21-.31A8.17 8.17 0 0 1 3.8 12c0-4.55 3.7-8.24 8.24-8.24 4.55 0 8.24 3.69 8.24 8.24 0 4.55-3.69 8.2-8.25 8.2Z"/></svg>
+        Confirmar por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     FOOTER
+     ===================================================================== -->
+<footer class="site-footer">
+  <p class="footer-monogram">Elyana &amp; Julio Cesar</p>
+  <p class="footer-date">14 · 11 · 2026</p>
+  <p class="footer-note">Con todo nuestro cariño, gracias por ser parte de este día.</p>
+</footer>
+
+
+<script>
+/* =========================================================================
+   1) CUENTA REGRESIVA
+   MODIFICAR AQUÍ LA FECHA Y HORA DE LA BODA (formato: 'AAAA-MM-DDTHH:MM:SS')
+   El "-05:00" es la zona horaria de Perú, así el conteo es exacto sin
+   importar en qué país esté el visitante.
+   ========================================================================= */
+const weddingDate = new Date('2026-11-14T17:00:00-05:00').getTime();
+
+const cdDays    = document.getElementById('cdDays');
+const cdHours   = document.getElementById('cdHours');
+const cdMinutes = document.getElementById('cdMinutes');
+const cdSeconds = document.getElementById('cdSeconds');
+const countdownGrid    = document.getElementById('countdownGrid');
+const countdownMessage = document.getElementById('countdownMessage');
+
+function pad(value){
+  return String(value).padStart(2, '0');
+}
+
+function updateCountdown(){
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
+
+  if (distance <= 0){
+    if (countdownGrid) countdownGrid.style.display = 'none';
+    if (countdownMessage) countdownMessage.style.display = 'block';
+    clearInterval(countdownTimer);
+    return;
+  }
+
+  const days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  if (cdDays)    cdDays.textContent    = pad(days);
+  if (cdHours)   cdHours.textContent   = pad(hours);
+  if (cdMinutes) cdMinutes.textContent = pad(minutes);
+  if (cdSeconds) cdSeconds.textContent = pad(seconds);
+}
+
+updateCountdown();
+const countdownTimer = setInterval(updateCountdown, 1000);
+
+
+/* =========================================================================
+   2) BARRA DE PROGRESO — META DE BODAS
+   MODIFICAR PORCENTAJE AQUÍ (número entre 0 y 100)
+   ========================================================================= */
+const giftProgressPercent = 31; // <-- MODIFICAR PORCENTAJE AQUÍ
+
+document.addEventListener('DOMContentLoaded', function(){
+  const progressFill  = document.getElementById('progressFill');
+  const progressLabel = document.getElementById('progressLabel');
+  const safePercent = Math.min(100, Math.max(0, giftProgressPercent));
+
+  if (progressFill)  progressFill.style.width = safePercent + '%';
+  if (progressLabel) progressLabel.textContent = safePercent + '%';
+});
+
+
+/* =========================================================================
+   3) RSVP / WHATSAPP
+   MODIFICAR AQUÍ EL NÚMERO DE TELÉFONO Y EL MENSAJE PREDETERMINADO
+   El número debe llevar el código de país, sin "+" y sin espacios
+   (ej. Perú: 51 + número = 51999999999)
+   ========================================================================= */
+const whatsappPhoneNumber = '51951545246'; // <-- MODIFICAR NÚMERO AQUÍ
+const whatsappMessage = '¡Hola Elyana y Julio! Confirmo mi asistencia a su boda 🤍'; // <-- MODIFICAR MENSAJE AQUÍ
+
+const rsvpBtn = document.getElementById('rsvpBtn');
+if (rsvpBtn){
+  rsvpBtn.href = 'https://wa.me/' + whatsappPhoneNumber + '?text=' + encodeURIComponent(whatsappMessage);
+}
+
+
+/* =========================================================================
+   4) ANIMACIONES SUTILES AL DESLIZAR (scroll reveal)
+   ========================================================================= */
+const revealElements = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window){
+  const revealObserver = new IntersectionObserver(function(entries, observer){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  revealElements.forEach(function(el){ revealObserver.observe(el); });
+} else {
+  /* Respaldo para navegadores muy antiguos sin IntersectionObserver */
+  revealElements.forEach(function(el){ el.classList.add('is-visible'); });
+}
+</script>
+<!-- REPRODUCTOR Y BOTÓN FLOTANTE DE MÚSICA -->
+<audio id="miMusica" loop preload="auto">
+  <source src="cancion.mp3" type="audio/mpeg">
+  Tu navegador no soporta el reproductor de audio.
+</audio>
+
+<button id="btnMusica" class="music-btn" onclick="toggleMusica()" title="Reproducir / Pausar Música">🎵</button>
+
+<script>
+  function toggleMusica() {
+    var audio = document.getElementById('miMusica');
+    var btn = document.getElementById('btnMusica');
+
+    if (audio.paused) {
+      audio.play().then(function() {
+        btn.innerHTML = "⏸️";
+        btn.classList.add("playing");
+      }).catch(function(error) {
+        alert("No se pudo reproducir. Verifica que el archivo 'cancion.mp3' esté guardado en la misma carpeta que este archivo HTML.");
+      });
+    } else {
+      audio.pause();
+      btn.innerHTML = "🎵";
+      btn.classList.remove("playing");
+    }
+  }
+</script>
+</body>
+</html>

@@ -992,7 +992,28 @@ button:focus-visible{
     color: #e5989b;
     letter-spacing: 6px;
   }
+  /* Estilo del marco para la foto de portada */
+.marco-foto-portada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem auto;
+}
+
+.foto-portada-img {
+  width: 220px;               /* Ancho adaptado para celulares y PC */
+  max-width: 85%;
+  height: auto;
+  border-radius: 16px;        /* Bordes redondeados */
+  border: 4px solid #D4AF37;  /* Marco dorado elegante */
+  padding: 6px;               /* Espacio blanco tipo paspartú */
+  background-color: #ffffff;  /* Fondo del marco */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  object-fit: cover;
+}
 </style>
+
+
 <div class="separador-floral">🌸 🌿 🌸</div>
   <!-- =====================================================================
      DECORACIÓN GLOBAL FLORAL Y BOTÁNICA PARA TODA LA PÁGINA
@@ -1099,14 +1120,18 @@ button:focus-visible{
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <p class="hero-monogram">J &amp; E</p>
+    <p class="hero-monogram">J C &amp; E</p>
     <p class="hero-eyebrow">Nos casamos</p>
     <!-- CAMBIAR AQUÍ: nombres de los novios -->
-    <h1 class="hero-names">Julio Cesar &amp; Elyana</h1>
+    <h1 class="hero-names">Julio Cesar <br> &amp; <br> Elyana</h1>
+    <!-- Foto con marco de los novios -->
+<div class="marco-foto-portada">
+  <img src="FOTOBODA.jpeg" alt="Elyana y Julio Cesar" class="foto-portada-img">
+</div>
     <!-- CAMBIAR AQUÍ: fecha principal -->
     <p class="hero-date">14 de Noviembre, 2026</p>
     <!-- CAMBIAR AQUÍ: frase romántica de bienvenida -->
-    <p class="hero-message">"Dos almas, un mismo camino. Nos encantaría que seas parte del comienzo de nuestra historia juntos."</p>
+   <p class="hero-message" style="color: #3d5245;">"Dos almas, un mismo camino. Nos encantaría que seas parte del comienzo de nuestra historia juntos."</p>
   </div>
 
   <a href="#historia" class="hero-scroll-cue" aria-label="Ir a la siguiente sección">
@@ -1130,16 +1155,22 @@ button:focus-visible{
         
         <!-- Bloque Padres -->
         <div class="story-text" style="padding: 0.5rem;">
-          <h3 style="font-family: var(--font-serif); color: var(--color-gold-deep); font-size: 1.6rem; margin-bottom: 1rem;">Nuestros Padres</h3>
-          <p style="margin-bottom: 0.8rem;"><strong>Madre del Novio:</strong><br> Julia Choque Mamani</p>
-          <p><strong>Padres de la Novia:</strong><br> Manuel Cuchurumi <br> &amp; <br> Josefa Condori Apaza</p>
+          <h3 style="font-family: var(--font-serif); color: var(--color-gold-deep); font-size: 1.6rem; margin-bottom: 1rem;">Con la Bendicion de nuestros Padres</h3>
+          
+          <p style="margin-bottom: 0.8rem;"><strong></strong><br> Julia Choque Mamani</p>
+
+<!-- Línea de separación -->
+<hr style="border: none; border-top: 1px solid #D4AF37; width: 80px; margin: 15px auto;">
+
+
+          <p><strong></strong><br> Manuel Cuchurumi Apaza <br>  <br> Josefa Condori de Cuchurumi</p>
         </div>
 
         <!-- Bloque Padrinos -->
         <div class="story-text" style="padding: 0.5rem;">
           <h3 style="font-family: var(--font-serif); color: var(--color-gold-deep); font-size: 1.6rem; margin-bottom: 1rem;">Nuestros Padrinos</h3>
-          <p style="margin-bottom: 0.8rem;"><strong></strong><br> Efrain Justo Payehuanca &amp; Liz Celedonia Apaza Mamani</p>
-          <p><strong></strong><br> Wuilder N. Maron Urbiola &amp; Lola L. Mamani Cuchurumi de Marón</p>
+          <p style="margin-bottom: 0.8rem;"><strong></strong><br> Efrain Justo Payehuanca <br> Liz C. Apaza Mamani de Justo</p>
+          <p><strong></strong><br> Wuilder N. Maron Urbiola <br> L. Lourdes Mamani Cuchurumi de Marón</p>
         </div>
 
       </div>
@@ -1322,6 +1353,7 @@ Con mucha ilusión, Julio Cesar y Elyana queremos invitarlos a ser testigos de n
     color: #666666;
   }
 </style>
+
 
 <section id="itinerario">
   <h2>Itinerario del Evento</h2>
@@ -1551,7 +1583,7 @@ const countdownTimer = setInterval(updateCountdown, 1000);
    2) BARRA DE PROGRESO — META DE BODAS
    MODIFICAR PORCENTAJE AQUÍ (número entre 0 y 100)
    ========================================================================= */
-const giftProgressPercent = 31; // <-- MODIFICAR PORCENTAJE AQUÍ
+const giftProgressPercent = 32; // <-- MODIFICAR PORCENTAJE AQUÍ
 
 document.addEventListener('DOMContentLoaded', function(){
   const progressFill  = document.getElementById('progressFill');
@@ -1570,7 +1602,7 @@ document.addEventListener('DOMContentLoaded', function(){
    (ej. Perú: 51 + número = 51999999999)
    ========================================================================= */
 const whatsappPhoneNumber = '51951545246'; // <-- MODIFICAR NÚMERO AQUÍ
-const whatsappMessage = '¡Hola Elyana y Julio! Confirmo mi asistencia a su boda 🤍'; // <-- MODIFICAR MENSAJE AQUÍ
+const whatsappMessage = '¡Hola Julios Cesar y Elyana! Confirmo mi asistencia a su boda 🤍'; // <-- MODIFICAR MENSAJE AQUÍ
 
 const rsvpBtn = document.getElementById('rsvpBtn');
 if (rsvpBtn){
@@ -1623,8 +1655,11 @@ if ('IntersectionObserver' in window){
       audio.pause();
       btn.innerHTML = "🎵";
       btn.classList.remove("playing");
+      
+      
     }
   }
+  
 </script>
 </body>
 </html>
